@@ -104,6 +104,8 @@ function save() {
     let counterStr = counter + " - "
     saveEl.textContent += counterStr
     console.log(counter);
+    counter = 0;
+    countEl.textContent = counter;
 }
 
 
