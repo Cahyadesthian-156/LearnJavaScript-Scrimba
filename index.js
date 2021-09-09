@@ -37,6 +37,7 @@ console.log(myAge);
 
 // count();
 
+/*
 // [--- TOMBOL INCREMENT/COUNT ---]
 let ygDiTombol = 0;
 //untuk membuat counter bertambah saat tombol di klik
@@ -44,13 +45,12 @@ function increment() {
     //console.log("Buttonnya di click");
     ygDiTombol += 1;
     document.getElementById('count-el').innerText=ygDiTombol;
-}
+}*/
 
 // [ bentuk lain penampbahan diatas ]
 /*
 let countEl = document.getElementById('count-el');
 let count = 0;
-
 //cara biar yang di klik nambah
 function incremen() {
     count = count + 1;
@@ -58,11 +58,63 @@ function incremen() {
 }
 */
 
-
+/*
 // [--TOMBOL SAVE--]
+let entries_log = ygDiTombol + " - "
 function save() {
-    console.log(ygDiTombol);
+    //console.log(ygDiTombol);
+    console.log(entries_log);
 }
+*/
+
+
+//[exercise string]
+// let message = "You have a new notification"
+
+// let username = "cahya"
+
+// let messageToUser = message + ", " + username + "!"
+
+// console.log(messageToUser);
+
+// let name = "Cahyadesthian"
+// let greetin = "Hi, my name is "
+// let myGreeting = greetin + name
+
+// console.log(myGreeting);
+
+
+
+// [---Tombol itu Lagi---]
+let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("save-el");
+
+console.log(countEl);
+console.log(saveEl);
+
+let counter = 0;
+
+function increment() {
+    counter += 1;
+    countEl.innerText = counter;
+}
+
+function save() {
+    //console.log(counter);
+    let counterStr = counter + " - "
+    saveEl.innerText += counterStr
+    console.log(counter);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
