@@ -23,25 +23,49 @@ console.log(myAge);
 
 //let count = 0;
 
+
+
+
+// function count() {
+//     console.log("6");
+//     console.log("5");
+//     console.log("4");
+//     console.log("3");
+//     console.log("2");
+//     console.log("1");
+// }
+
+// count();
+
+// [--- TOMBOL INCREMENT/COUNT ---]
 let ygDiTombol = 0;
+//untuk membuat counter bertambah saat tombol di klik
 function increment() {
     //console.log("Buttonnya di click");
     ygDiTombol += 1;
     document.getElementById('count-el').innerText=ygDiTombol;
 }
 
+// [ bentuk lain penampbahan diatas ]
+/*
+let countEl = document.getElementById('count-el');
+let count = 0;
+
+//cara biar yang di klik nambah
+function incremen() {
+    count = count + 1;
+    countEl.innerText = count;
+}
+*/
 
 
-function count() {
-    console.log("6");
-    console.log("5");
-    console.log("4");
-    console.log("3");
-    console.log("2");
-    console.log("1");
+// [--TOMBOL SAVE--]
+function save() {
+    console.log(ygDiTombol);
 }
 
-count();
+
+
 
 
 
