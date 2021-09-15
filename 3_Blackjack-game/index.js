@@ -56,6 +56,7 @@ function newCard() {
     let card = 4
 
     sum += card
+    cards.push(card)
 
     renderGame()
 
