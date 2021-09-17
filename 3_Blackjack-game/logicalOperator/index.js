@@ -9,3 +9,32 @@ if (hasCompletedCourse === true && givesCertificate === true && cheating === fal
 function generateCertificate() {
     console.log("Generating Certificate");
 }
+
+
+let hasSolvedChallange = false
+let hasHintsLeft = false
+
+function showSolution() {
+    console.log("Showing the solution ...");
+}
+
+
+if(hasSolvedChallange === false && hasHintsLeft !== true) {
+    showSolution()
+}
+
+let likesDocumentaries = true
+let likesStartups = false
+
+if(likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+
+function recommendMovie() {
+    console.log("Hey check out this new film we think you will like!");
+}
+
+
+
+
+

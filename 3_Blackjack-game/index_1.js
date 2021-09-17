@@ -7,6 +7,14 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("card-el")
 
+//this called as object
+let player = {
+    name: "Cahyul",
+    chips: 999
+}
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
 //create function getRancomcard(), first it gonna just return number 5
 function getRandomCard() {
@@ -62,9 +70,14 @@ function renderGame() {
 
 
 function newCard() {
-    let newCard = getRandomCard()
-    sum += newCard
 
-    cards.push(newCard)
-    renderGame()
+    //only allow player get new card if she alive
+    if(isAlive === true && hasBlackJack === false) {
+        let newCard = getRandomCard()
+        sum += newCard
+
+        cards.push(newCard)
+        renderGame()
+    }
+    
 }
