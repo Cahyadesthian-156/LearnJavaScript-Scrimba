@@ -1,27 +1,18 @@
-let myLeads = `["www.awesomelink.com"]`
-console.log(typeof myLeads);
-//diatas tu jadi string
-
-myLeads = JSON.parse(myLeads)   //myleads jadi array
-console.log(typeof myLeads);
-
-myLeads.push("www.beat-best.com")
-myLeads = JSON.stringify(myLeads)
-
-console.log(typeof myLeads);
-
+let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-
-
-
-
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
+    // [save the myLeads array to local Storage]
+    // PS: remeber JSON.stringfy()
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    
     renderLeads()
+
+    console.log(localStorage.getItem("myLeads"));
 })
 
 function renderLeads() {
