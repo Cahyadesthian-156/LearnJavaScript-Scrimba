@@ -3,6 +3,13 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
+//sebelumnya stringnnya sudah ada di local storage, tapi kalau di refresh pagenya, yang di page hilang, untuk itu mau dibetulkan biar pas di refresh bisa ngambil apa yang ada di local sorage, yg di local storage merupakan string lho jadi kita bisa pakai JSON.parse()
+let leadFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+console.log(leadFromLocalStorage);
+
+
+
+
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
