@@ -3,10 +3,16 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-//sebelumnya stringnnya sudah ada di local storage, tapi kalau di refresh pagenya, yang di page hilang, untuk itu mau dibetulkan biar pas di refresh bisa ngambil apa yang ada di local sorage, yg di local storage merupakan string lho jadi kita bisa pakai JSON.parse()
+//localStorage.clear()
+// ["lead1", "lead2"] or null
 let leadFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-console.log(leadFromLocalStorage);
-
+//console.log(leadFromLocalStorage);
+if(leadFromLocalStorage) {
+    //myLeads.push(leadFromLocalStorage)    //hasilnya jadi nyamping
+    myLeads = leadFromLocalStorage
+    
+    renderLeads()
+}
 
 
 
