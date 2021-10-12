@@ -2,18 +2,22 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
 
-//localStorage.clear()
-// ["lead1", "lead2"] or null
-let leadFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-//console.log(leadFromLocalStorage);
+
+const leadFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
 if(leadFromLocalStorage) {
-    //myLeads.push(leadFromLocalStorage)    //hasilnya jadi nyamping
-    myLeads = leadFromLocalStorage
-    
+    myLeads = leadFromLocalStorage   
     renderLeads()
 }
 
+deleteBtn.addEventListener("dblclick", function() {
+    //console.log("double click");
+    localStorage.clear()
+    myLeads=[]
+    renderLeads()
+})
 
 
 inputBtn.addEventListener("click", function() {
