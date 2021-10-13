@@ -3,7 +3,7 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-
+const tabBtn = document.getElementById("tab-btn")
 
 const leadFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
@@ -11,6 +11,17 @@ if(leadFromLocalStorage) {
     myLeads = leadFromLocalStorage   
     render(myLeads)
 }
+
+const tabs = [
+    {url: "https://www.instagram.com/"}
+]
+
+tabBtn.addEventListener("click", function() {
+    //console.log(tabs[0].url);
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
+})
 
 function render(leads) {
     let listItems = ""
