@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: whitesmoke;
+  color: #130e0f;
+}
+
+h1 {
+  letter-spacing: 0px;
+  font-weight: 100;
+}
+
+/* id DOM selectornya pakai # */
+#container-img {
+  width: 100%;
+}
+
+/* class DOM selectornya pakai titik */
+.team-img {
+  width: 100px;
+  border-radius: 100%;
+  margin: 10px;
+}
